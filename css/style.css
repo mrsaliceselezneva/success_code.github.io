@@ -2,7 +2,6 @@ body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 
-    font-size: 15px;
     line-height: 1.6;
     color: #333;
 }
@@ -249,7 +248,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .slider__item {
-    width: 10%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    min-width: 10%;
     padding: 20px 0;
     position: relative;
 
@@ -285,42 +287,17 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
-.back {
-    height: auto;
-    width: 100%;
-    font-size: 15px;
-    background: url("../images/bridge22.jpg");
-    -webkit-background-size: cover;
-    background-size: cover;
-}
 
-.back__title {
-    font-family: 'Gabriola';
-    text-align: center;
-    color: black;
-    font-size: 50px;
-    /*font-weight: 700;*/
-    line-height: 1;
-}
 
-.back__title:after {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 3px;
-    margin: 30px auto;
-
-    background-color: red;
-}
 
 .centkontainer {
     text-align: center;
-    font-family: 'Times New Roman';
+    
 }
 
 .adv_cont {
     text-align: center;
-    font-family: 'Times New Roman';
+    
     text-decoration-style: solid;
     font-size: 20px;
 }
@@ -359,12 +336,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .back {
+    padding-top: 2vh;
     height: auto;
     width: 100%;
-    font-size: 15px;
-    background: url("../images/bridge22.jpg");
-    -webkit-background-size: cover;
+    background: url("../images/bridge22.jpg");;
     background-size: cover;
+}
+
+.bottom{
+    border-top: 1px solid;
 }
 
 .back__title {
@@ -381,7 +361,7 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     width: 100px;
     height: 3px;
-    margin: 30px auto;
+    margin: 0px auto;
 
     background-color: red;
 }
@@ -471,7 +451,6 @@ h1, h2, h3, h4, h5, h6 {
 #toTop {
 width:5%;
 height :10%;
-background: white;
 border:2px solid #ccc;
 border-radius: 10px;
 text-decoration-color: azure;
