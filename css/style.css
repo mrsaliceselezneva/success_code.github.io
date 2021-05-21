@@ -471,6 +471,7 @@ h1, h2, h3, h4, h5, h6 {
 #toTop {
 width:5%;
 height :10%;
+background: white;
 border:2px solid #ccc;
 border-radius: 10px;
 text-decoration-color: azure;
