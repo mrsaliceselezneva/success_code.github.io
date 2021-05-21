@@ -1,476 +1,565 @@
-body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-
-    line-height: 1.6;
-    color: #333;
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-}
-
-
-/* Container */
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-
-
-/* Intro */
-.intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    height: 100vh;
-
-    background: linear-gradient(0deg, #212325, transparent 20vh), url(../images/ulgtu.jpg) no-repeat;
-    
-    background-size: cover;
-}
-
-.intro_adv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-
-    background: url("../images/veter2.jpg") center no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-}
-
-.intro_dam {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-
-    background: url("../images/ulsk5.jpg") center no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-}
-
-.intro_stat {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-
-    background: url("../images/ulsk2.jpg") center no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-}
-
-.intro__inner {
-    width: 100%;
-    max-width: 880px;
-    margin: 0 auto;
-    text-shadow: #212325 0 0 20px,#212325 0 0 10px;
-    text-align: center;
-}
-
-.intro__title {
-    color: #fff;
-    font-size: 50px;
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: 1;
-}
-
-.intro__title:after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    margin: 60px auto;
-
-    background-color: #fff;
-}
-
-.intro__suptitle {
-    margin-top: 110px;
-
-    font-family: 'Kaushan Script', cursive;
-    font-size: 50px;
-    color: #fff;
-}
-
-
-/* Header */
-.header {
-    width: 100%;
-    padding-top: 30px;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-}
-
-.header__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header__logo {
-    font-size: 30px;
-    font-weight: 700;
-    color: #fff;
-}
-
-
-/* Nav */
-.nav {
-    font-size: 14px;
-    text-transform: uppercase;
-}
-
-.nav__link {
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 15px;
-    position: relative;
-
-    color: #fff;
-    text-decoration: none;
-
-    transition: color .1s linear;
-}
-
-.nav__link:after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 3px;
-
-    background-color: cornflowerblue;
-    opacity: 0;
-
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1;
-
-    transition: opacity .1s linear;
-}
-
-iframe{
-    border: none;
-}
-
-.nav__link:hover {
-    color: cornflowerblue;
-    text-decoration: none;
-}
-
-.nav__link:hover:after,
-.nav__link.active:after {
-    opacity: 1;
-}
-
-.nav__link.active {
-    color: cornflowerblue;
-}
-
-
-/* Button */
-.btn {
-    display: inline-block;
-    vertical-align: top;
-    padding: 8px 30px;
-
-    border: 3px solid #fff;
-
-    font-size: 14px;
-    font-weight: 700;
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-
-    transition: background .1s linear, color .1s linear;
-}
-
-.btn:hover {
-    background-color: #fff;
-    color: #333;
-}
-
-.btn_2 {
-    display: inline-block;
-    vertical-align: top;
-    padding: 8px 30px;
-
-    border: 3px solid white;
-    border-radius: 10px;
-    background-color: grey;
-
-    font-size: 14px;
-    font-weight: 700;
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-
-    transition: background .1s linear, color .1s linear;
-}
-
-.btn_2:hover {
-    background-color: #212325;
-    color: white;
-}
-
-
-
-
-/* Slider */
-.slider {
-    width: 100%;
-
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-}
-
-.slider__inner {
-    display: flex;
-    justify-content: space-between;
-}
-
-.slider__item {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    min-width: 10%;
-    padding: 20px 0;
-    position: relative;
-
-    border-top: 3px solid #fff;
-    opacity: .7;
-
-    font-size: 18px;
-    color: #fff;
-    text-transform: uppercase;
-}
-
-.slider__item.active {
-    opacity: 1;
-    border-top: 20px solid #fff;
-}
-
-.slider__item.active:before {
-    content: "";
-    display: block;
-    width: 70px;
-    height: 20px;
-
-    background-color: #f38181;
-
-    position: absolute;
-    top: -20px;
-    left: 0;
-    z-index: 1;
-}
-
-.slider__num {
-    font-size: 24px;
-    font-weight: 700;
-}
-
-
-
-
-.centkontainer {
-    text-align: center;
-    
-}
-
-.adv_cont {
-    text-align: center;
-    
-    text-decoration-style: solid;
-    font-size: 20px;
-}
-
-.text_left {
-    text-align: left;
-}
-
-.h2_class {
-    font-size: 25px;
-    text-decoration: underline;
-    text-align: center;
-}
-
-.decoration {
-    width: 100%;
-    height: auto;
-    border-radius: 14px;
-    border: 2px;
-    background-color: bisque;
-    text-align: left;
-    font-size: 14px;
-    z-index: 3;
-}
-
-.box_decor {
-    width:80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    height:auto;
-    border-bottom: 3px;
-    border-bottom-color: #212325;
-    border-radius: 15px;
-    background-color:white;
-    z-index: 2;
-}
-
-.back {
-    color: white;
-    padding-top: 2vh;
-    height: auto;
-    width: 100%;
-    background-color: #212325;
-    
-    background-size: cover;
-}
-
-.bottom{
-    border-top: 1px solid;
-}
-
-.back__title {
-    font-family: 'Gabriola';
-    text-align: center;
-    /*color: #212325;*/
-    font-size: 50px;
-    /*font-weight: 700;*/
-    line-height: 1;
-}
-
-.back__title:after {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 3px;
-    margin: 0px auto;
-
-    background-color: cornflowerblue;
-}
-
-
-.im {
-    border-radius: 10px;
-}
-
-.a_point {
-    text-decoration-color: blue;
-    pointer-events:none;
-}
-
-.a_point:hover {
-    color: red;
-}
-
-
-.demo_2 {
-    max-width: 960px;
-    mask: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
-    margin: 0 auto;
-    padding: 50px 0;
-    
-    text-align: center;
-    background: linear-gradient(90deg, rgba(255, 248, 220, 0.9) 0%, rgba(255, 248, 220, 0.9) 25%, rgba(255, 248, 220, 0.9) 75%, rgba(255, 248, 220, 0.9) 100%);
-    width: 100%;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
-    border-radius: 10px 10px 10px 10px;
-    
-    display: inline-block;
-    
-    padding: 20px;
-    font-family: 'Trade Winds', cursive;
-    color: rgba(0, 0, 0, 1);
-    text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
-    font-size: 25px;
-    text-decoration: none;
-    display: block;
-}
-
-
-.wrapper {
-    display: inline-block;
-    max-width: 860px;
-    max-height: 1000px;
-    width: 100%;
-    height: 100%;
-    margin-top: 50px;
-    margin-left: 55px;
-    margin-right: 50px;
-}
-
-#left, #right, #main {
-    height: 100%;
-    float: left;
-}
-
-
-
-#main {
-    max-width: 700px;
-    max-height: 500px;
-    width: 100%;
-    height: 100%;
-    background: gray;
-    margin: 0px 0px 0px 0px;
-}
-
-
-#left, #right {
-    width: 50px;
-    margin-top: 225px;
-}
-
-#mainImg {
-    height: 100%;
-}
-
-#main div {
-    height: 100%;
-    float: left;
-    width: 100%;
-}
-
-#toTop {
-width:5%;
-height :10%;
-border:2px solid #ccc;
-border-radius: 10px;
-text-decoration-color: azure;
-text-align:center;
-padding:5px; 
-position:fixed;
-bottom:2%; /* отступ кнопки от нижнего края страницы*/
-right:1%;
-cursor:pointer;
-display:none;
-color:rgb(190, 190, 190);
-font-family:verdana;
-font-size:50px;
-opacity: 0.7;
-}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="shortcut icon" href="images/tree.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:400,700&amp;subset=cyrillic-ext"
+      rel="stylesheet"
+    />
+    <title>Машинное обучение</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      $(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() != 0) {
+            $("#toTop").fadeIn();
+          } else {
+            $("#toTop").fadeOut();
+          }
+        });
+
+        $("#toTop").click(function () {
+          $("body,html").animate({ scrollTop: 0 }, 800);
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__logo">Ульяновск УлГТУ</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="intro">
+      <div class="container">
+        <div class="intro__inner">
+          <h2 class="intro__suptitle">
+            Научно-исследовательский проект по машинному обучению
+          </h2>
+          <h1 class="intro__title">"Код успеха"</h1>
+        </div>
+      </div>
+
+      <div class="slider">
+        <div class="container">
+          <div class="slider__inner">
+            <div class="slider__item">
+              <span class="slider__num"></span>
+              <a class="nav__link" href="#introduction">Введение</a>
+            </div>
+            <div class="slider__item">
+              <span class="slider__num"></span>
+              <a class="nav__link" href="#test1">Тест 1</a>
+            </div>
+            <div class="slider__item">
+              <span class="slider__num"></span>
+              <a class="nav__link" href="#test2">Тест 2</a>
+            </div>
+            <div class="slider__item">
+              <span class="slider__num"></span>
+              <a class="nav__link" href="#test3">Тест 3</a>
+            </div>
+            <div class="slider__item">
+              <span class="slider__num"></span>
+              <a class="nav__link" href="#test4">Тест 4</a>
+            </div>
+            <div class="slider__item">
+              <span class="slider__num"></span>
+              <a class="nav__link" href="#test5">Тест 5</a>
+            </div>
+            <div class="slider__item">
+              <span class="slider__num"></span>
+              <a class="nav__link" href="#conclusion">Заключение</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="back">
+      <div class="container">
+        <h1 class="back__title" id="introduction">Введение</h1>
+
+        <div class="centkontainer">
+          <h2>Может ли машина мыслить?</h2>
+
+          <p align="justify">
+            Чтобы ответить на этот вопрос, нужно определить смысл терминов
+            «машина» и «мыслить». Однако, если просто пытаться понять смысл этих
+            слов, то мы всё сведём к статистическому обследованию наподобие
+            анкетного опроса.
+          </p>
+
+          <p align="justify">
+            Чтобы этого избежать Алан Тьюринг заменил основной вопрос на другой.
+            И теперь проблему можно описать «игрой в имитацию».
+          </p>
+
+          <p align="justify">
+            В этой игре участвуют три человека: мужчина (A), женщина (В) и
+            кто-нибудь задающий вопросы (С), которым может быть лицо любого
+            пола. Задающий вопросы отделен от двух других участников игры
+            стенами комнаты, в которой он находится. Также он не должен слышать
+            их и даже почерк не должен знать. Цель игры для задающего вопросы
+            состоит в том, чтобы определить, кто из двух других участников игры
+            является мужчиной (A), а кто — женщиной (В). Он знает их под
+            обозначениями X и Y и в конце игры говорит либо: «X есть А, и Y есть
+            В», либо: «X есть В, и Y есть А».
+          </p>
+
+          <p align="justify">
+            Для А цель игры состоит в том, чтобы побудить С прийти к неверному
+            заключению.
+          </p>
+
+          <p align="justify">
+            Цель игры для третьего игрока — женщины (В) — состоит в том, чтобы
+            помочь задающему вопросы. Для нее, вероятно, лучшая стратегия —
+            давать правдивые ответы.
+          </p>
+
+          <p align="justify">
+            Поставим теперь вопрос: «Что произойдет, если в этой игре вместо А
+            будет участвовать машина?» Будет ли в этом случае задающий вопросы
+            ошибаться столь же часто, как и в игре, где участниками являются
+            только люди? Эти вопросы и заменят наш первоначальный вопрос «могут
+            ли машины мыслить?».
+          </p>
+
+          <p align="justify">
+            Будем считать, что наилучшая стратегия для машины состоит в том,
+            чтобы давать ответы, которые в соответствующей обстановке дал бы
+            человек.
+          </p>
+
+          <p align="justify">
+            Вопрос, поставленный в начале, не станет совершенно точным до тех
+            пор, пока мы не укажем, что именно следует понимать под словом
+            «машина». Разумеется, нам бы хотелось, чтобы в игре можно было
+            применять любой вид инженерной техники. Мы склонны также допустить
+            возможность, что инженер или группа инженеров могут построить
+            машину, которая будет работать, но удовлетворительного описания
+            работы, которой они не смогут дать, поскольку метод, которым они
+            пользовались, был в основном экспериментальным. Наконец, мы хотели
+            бы исключить из категории машин людей, рожденных обычным образом.
+            Трудно построить определение так, чтобы оно удовлетворяло этим трем
+            условиям. Можно, например, потребовать, чтобы все конструкторы
+            машины были одного пола; в действительности, однако, этого
+            недостаточно, так как, по-видимому, можно вырастить законченный
+            индивидуум из одной-единственной клетки, взятой (например) из кожи
+            человека. Сделать это было бы подвигом биологической техники,
+            заслуживающим самой высокой похвалы, но мы не склонны рассматривать
+            этот случай как «построение мыслящей машины».
+          </p>
+
+          <p align="justify">
+            Сказанное наводит нас на мысль отказаться от требования, согласно
+            которому в игре следует допускать любой вид техники. Мы еще больше
+            склоняемся к этой мысли в силу того обстоятельства, что наш интерес
+            к «мыслящим машинам» возник благодаря машине особого рода, обычно
+            называемой «электронной вычислительной машиной» или «цифровой
+            вычислительной машиной». Поэтому мы разрешаем принимать участие в
+            нашей игре только цифровым вычислительным машинам.
+          </p>
+
+          <p align="justify">
+            Предполагается, что вычислительные машины могут выполнять любую
+            операцию, которую мог бы выполнить человек-вычислитель. Мы считаем,
+            что вычислитель придерживается определенных, раз навсегда заданных
+            правил и не имеет права ни в чем отступать от них, записанные в
+            книгу, у него есть бесконечная бумага и карандаши.
+          </p>
+
+          <p align="justify">
+            Если данное выше пояснение принять за определение, то возникает
+            угроза того, что наше рассуждение окажется движущимся в замкнутом
+            круге. Чтобы избежать этой опасности, мы приведем перечень тех
+            средств, с помощью которых достигается требуемый эффект). Можно
+            считать, что цифровая вычислительная машина состоит из трех частей:
+          </p>
+
+          <p align="justify">
+            1. запоминающего устройства - это склад информации,
+          </p>
+
+          <p align="justify">
+            2. исполнительного устройства — это часть машины, выполняющая
+            разнообразные индивидуальные операции, из которых состоит
+            вычисление,
+          </p>
+
+          <p align="justify">
+            3. контролирующего устройства – таблица команд, которой обязана
+            следовать машина. Составление таблицы команд обычно называют
+            «программированием».
+          </p>
+
+          <p align="justify">
+            Теперь мы можем вернуться к вопросу «могут ли машины мыслить?». Его
+            можно заменить вопросом «существуют ли воображаемые цифровые
+            вычислительные машины, которые могли бы хорошо играть в имитацию?».
+            Переформулировать в: «Существуют ли машины с дискретными
+            состояниями, которые могли бы хорошо играть в эту игру?» Но в свете
+            того, что цифровые вычислительные машины универсальны, мы видим, что
+            любой из этих вопросов эквивалентен следующему: «Если взять только
+            одну конкретную цифровую вычислительную машину Ц, то, спрашивается:
+            справедливо ли утверждение о том, что, изменяя емкость памяти этой
+            машины, увеличивая скорость ее действия и снабжая ее подходящей
+            программой, можно заставить Ц удовлетворительно исполнять роль А в
+            «игре в имитацию» (причем роль В будет исполнять человек)?»
+          </p>
+
+          <p align="justify">
+            Алан Тьюринг считал, что со временем, когда память машин станет
+            около 10^9, то они смогут выигрывать в игре в имитацию в 70%
+            случаев. Но сейчас даже смартфоны имеют большую память.
+          </p>
+
+          <p align="justify">
+            Сейчас же люди пытаются создать машину, которая не просто сможет
+            выдавать себя за человека, а будет учиться этому с 0. На основании
+            этой идеи и сделали наш проект.
+          </p>
+
+          <p align="justify">
+            Что такое машинное обучение? Машинное обучение — процесс, в
+            результате которого компьютер способен показывать поведение, которое
+            в нее не было явно запрограммировано Те суть машинного обучение
+            заключается в том, что мы задаём алгоритм обучение для решения
+            проблемы, а не сам алгоритм для решение этой проблемы. Такой подход
+            необходим, когда алгоритм для решения проблемы будет очень
+            трудоёмким и затратным по времени, если его писать самому.
+          </p>
+
+          <p align="justify">
+            Существует 3 основных вида машинного обучение, обучение с учителем,
+            при котором мы даём машине массив данных в которых есть примеры
+            решения проблемы, и она обучается на их основе, обучение без
+            учителя, при котором машине мы даём также массив данных, но они
+            абсолютно случайны, и мы надеемся, что машина найдёт в них
+            зависимость.
+          </p>
+
+          <p align="justify">
+            И последний обучение с подкреплением, в котором мы даём машине
+            среду, в которой она совершает действия, и мы этим действиям даём
+            оценку. В данном проекте использовалось обучение с подкреплением,
+            потому что у нас нет возможности отыграть в игру более чем 1000 раз
+            успешно, чтобы обучение дало хоть какой-то результат, а обучение без
+            учители слишком основано на вере в чудо и то, что машина сама
+            поймёт, что ей нужно делать.
+          </p>
+
+          <p align="justify">
+            На слайде показано суть обучения с подкреплением, агенту(игроку)
+            даётся некоторая среда, он определяет в каком состоянии он
+            находится, и на основе этого состояния он выбирает какое действие
+            ему совершить и переходит в новое состояния, агент оценивает,
+            насколько действие, которое он совершил полезное.
+          </p>
+
+          <p align="justify">
+            Тут приведён пример на основе мыши в лабиринте, она видит, что
+            вокруг неё, на основе этого она делает свой шаг, если она выбрала
+            правильное направление, то она в определённый момент наткнётся на
+            сыр и он буде её наградой.
+          </p>
+
+          <p align="justify">
+            Q-обучение самый простой популярный алгоритм обучения с
+            подкреплением. В основе лежит определение оценки функции полезности
+            (Q-функции) для конечного числа действий. Каждое действие в каждом
+            состоянии можно оценить при помощи функцией полезности Qπ(s, a) –
+            ожидаемой суммой наград при совершении агентом действия a в
+            состоянии s и совершении последующих действий в соответствии со
+            стратегией π. Процесс обучения – определение функции полезности в
+            процессе функционирования агента.
+          </p>
+
+          <p align="justify">
+            В таблице видно, что для каждого состояния и действия есть своё q
+            значение, и в каком столбце оно будет большее, то действие и будет
+            выбрано.
+          </p>
+
+          <h1 class="back__title" id="test1">Тест 1</h1>
+          <br />
+
+          <p>
+            Запустим игру, где будет 0 мирных и 4 враждебных бота. игра будет
+            идти 300 итераций. это должно хватить для того, чтобы боты смогли
+            обучиться и выбрать оптимальную стратегию.
+          </p>
+
+          <iframe
+            src="https://drive.google.com/file/d/1u3UrdNcMbjdo3Q8JvS0JH0UQBYS9IDcu/preview"
+            allowfullscreen="true"
+            width="640"
+            height="480"
+          ></iframe>
+
+          <p>
+            После первый игры мы видим, что каждый бот придерживается своей
+            стратегии, которая была прописана ему изначально
+          </p>
+
+          <iframe
+            src="https://drive.google.com/file/d/1dHCiGFSGTX1showpSgSw6j2RS4IGJkAW/preview"
+            allowfullscreen="true"
+            width="640"
+            height="480"
+          ></iframe>
+
+          <p>
+            После 100 игры можно наблюдать, что поведение враждебно настроенных
+            становится более мирным.
+          </p>
+
+          <iframe
+            src="https://drive.google.com/file/d/1i0h6uBePlegVGLnTnaFDiohEThucwuZG/preview"
+            allowfullscreen="true"
+            width="640"
+            height="480"
+          ></iframe>
+
+          <p>
+            После 300 игры видно, что все боты так или иначе начинают играть
+            мирно. то есть они выбрали это как оптимальную стратегию
+          </p>
+
+          <h1 class="back__title" id="test2">Тест 2</h1>
+
+          <p>
+            Запустим игру, где будет 1 мирный и 3 враждебных бота. игра будет
+            идти 300 итераций. это должно хватить для того, чтобы боты смогли
+            обучиться и выбрать оптимальную стратегию.
+          </p>
+
+          <iframe
+            src="https://drive.google.com/file/d/1R7ZxRU3Zg17Mqa92D_sKINYenJCNacXA/preview"
+            allowfullscreen="true"
+            width="640"
+            height="480"
+          ></iframe>
+
+          <p>
+            После первый игры мы видим, что каждый бот придерживается своей
+            стратегии, которая была прописана ему изначально
+          </p>
+
+          <iframe
+            src="https://drive.google.com/file/d/1-o0KlPYt-iOD6Le2bX4rVn4LXNdTEcOY/preview"
+            allowfullscreen="true"
+            width="640"
+            height="480"
+          ></iframe>
+
+          <p>
+            После 100 игры можно наблюдать, что поведение враждебно настроенных
+            становится более мирным, и наоборот, более мирные становятся более
+            агрессивными.
+          </p>
+
+          <iframe
+            src="https://drive.google.com/file/d/11X5GUXK8FpQr4J7a0UbbBX-3O2KfUkMO/preview"
+            allowfullscreen="true"
+            width="640"
+            height="480"
+          ></iframe>
+
+          <p>
+            После 300 игры видно, что все боты так или иначе начинают играть
+            мирно. то есть они выбрали это как оптимальную стратегию
+          </p>
+
+          <h1 class="back__title" id="test3">Тест 3</h1>
+          <br />
+
+          <p>
+            Запустим игру, где будет 2 мирных и 2 враждебных бота. игра будет
+            идти 300 итераций. это должно хватить для того, чтобы боты смогли
+            обучиться и выбрать оптимальную стратегию.
+          </p>
+
+          <iframe
+            src="https://drive.google.com/file/d/1WsbdMnzfWjZX1rMgfQhDugK39-PFA-Ch/preview"
+            allowfullscreen="true"
+            width="640"
+            height="480"
+          ></iframe>
+
+          <p>
+            После первый игры мы видим, что каждый бот придерживается своей
+            стратегии, которая была прописана ему изначально
+          </p>
+
+          <iframe
+            src="https://drive.google.com/file/d/10D4qECYLkKbAoIO0NtVBCZlJAp8f72sZ/preview"
+            allowfullscreen="true"
+            width="640"
+            height="480"
+          ></iframe>
+
+          <p>
+            После 100 игры можно наблюдать, что поведение враждебно настроенных
+            становится более мирным, и наоборот, более мирные становятся более
+            агрессивными.
+          </p>
+
+          <iframe
+            src="https://drive.google.com/file/d/11BsIAtKwadtnBWJ4CdzDIuI4WrxJEqiw/preview"
+            allowfullscreen="true"
+            width="640"
+            height="480"
+          ></iframe>
+
+          <p>
+            После 300 игры видно, что все боты так или иначе начинают играть
+            мирно. то есть они выбрали это как оптимальную стратегию
+          </p>
+
+          <h1 class="back__title" id="test4">Тест 4</h1>
+          <br />
+
+          <p>
+            Запустим игру, где будет 3 мирных и 1 враждебный бот. игра будет
+            идти 300 итераций. это должно хватить для того, чтобы боты смогли
+            обучиться и выбрать оптимальную стратегию.
+          </p>
+
+          <iframe
+            src="https://drive.google.com/file/d/10QJqn8Hm6S_BY6Rkb0l1XUna1HBSJYov/preview"
+            allowfullscreen="true"
+            width="640"
+            height="480"
+          ></iframe>
+
+          <p>
+            После первый игры мы видим, что каждый бот придерживается своей
+            стратегии, которая была прописана ему изначально
+          </p>
+
+          <iframe
+            src="https://drive.google.com/file/d/19M2ztM9A67O5TovvBAlS4VfQ99YdWYsu/preview"
+            allowfullscreen="true"
+            width="640"
+            height="480"
+          ></iframe>
+
+          <p>
+            После 100 игры можно наблюдать, что поведение враждебно настроенных
+            становится более мирным, и наоборот, более мирные становятся более
+            агрессивными.
+          </p>
+
+          <iframe
+            src="https://drive.google.com/file/d/12FqqC_sOq86niWNcxyDeW2Br5b9pcDWD/preview"
+            allowfullscreen="true"
+            width="640"
+            height="480"
+          ></iframe>
+
+          <p>
+            После 300 игры видно, что все боты так или иначе начинают играть
+            мирно. то есть они выбрали это как оптимальную стратегию
+          </p>
+
+          <h1 class="back__title" id="test5">Тест 5</h1>
+          <br />
+
+          <p>
+            Запустим игру, где будет 4 мирных и 0 враждебных ботов. игра будет
+            идти 300 итераций. это должно хватить для того, чтобы боты смогли
+            обучиться и выбрать оптимальную стратегию.
+          </p>
+
+          <iframe
+            src="https://drive.google.com/file/d/1tCsuV7zOYukIPFgW7WR40YmZiXFBSpLV/preview"
+            allowfullscreen="true"
+            width="640"
+            height="480"
+          ></iframe>
+
+          <p>
+            После первый игры мы видим, что каждый бот придерживается своей
+            стратегии, которая была прописана ему изначально
+          </p>
+
+          <iframe
+            src="https://drive.google.com/file/d/12nlwamyS_Ln9eAAnNG5k33tjRa-Po1Pk/preview"
+            allowfullscreen="true"
+            width="640"
+            height="480"
+          ></iframe>
+
+          <p>
+            После 100 игры можно наблюдать, что поведение не изменилось, они
+            также продолжают придерживаться изначальной стратегии, т.е. играют
+            мирно.
+          </p>
+
+          <iframe
+            src="https://drive.google.com/file/d/1MJWPsYw1-T1Ym9uhLwleLQcbdGrpcl4b/preview"
+            allowfullscreen="true"
+            width="640"
+            height="480"
+          ></iframe>
+
+          <p>
+            После 300 игры боты так же продолжают играть мирно.Боты выбрали
+            мирный путь, как оптимальную стратегию.
+          </p>
+
+          <h1 class="back__title" id="conclusion">Заключение</h1>
+
+          <p>
+            Если рассматривать данную игру с точки зрения теории игр, то можно
+            понять, что оптимальной стратегией будет убивать тех, кто слабее
+            тебя, если это приносит больше монет , чем от шахты.Однако, стоит
+            заметить, что вначале игры все боты находятся в равных условиях и
+            нет тех , кто может быть слабее или сильнее других. Следовательно,
+            чтобы можно было кого-то убить , нужно сначала получить какое-то
+            количество монет, что можно сделать только при помощи шахты.Однако,
+            даже если после этого у нас окажется монет больше, чем у других
+            ботов и при убийстве одного из них мы заработаем больше , чем с
+            шахты, это не значит, что убивать его будет оптимальным
+            вариантом.Ведь пока мы будем идти до бота , которого хотим убить, он
+            может заработать больше монет , чем у нас и в этом случае бот сам
+            нас убьет. Тем более прибыль с убийства бота должна быть больше, чем
+            если бы за каждый такт игры, который мы потратили на путь, мы
+            получали бы монеты с шахты.Именно для избежания больших потерь, мы
+            стимулируем ботов идти их в центр поля, чтобы увеличить их прибыль с
+            убийства.Однако, вспомним, что вначале игры все находятся в равных
+            условиях и все боты пойдут в центр с одинаковой суммой
+            денег.Следовательно, когда они придут в центр, они будут пытаться
+            заработать денег больше чем у других, для этого они будут собирать
+            деньги с шахт.Но в этом случае никто не заработает больше монет, так
+            как они будут находиться в равных условиях. Исходя из этого можно
+            понять, что боты просто будут зарабатывать монеты стоя рядом с
+            шахтами.<br />
+            Из всего вышесказанного можно сделать вывод, что мирный путь - это
+            оптимальная стратегия, что подтверждает теорию игр и наши тесты с
+            машинным обучением.
+          </p>
+
+          <div class="bottom">
+            Подготовили студенты УлГТУ 2-го курса группы ИВТАСбд-21:<br />
+            Мясоедов Максим Дмитриевич<br />
+            Полувесов Артём Алексеевич<br />
+            Еремеева Юлия Дмитриевна<br />
+            Егоров Вадим Станиславович<br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <div id="toTop">^</div>
+</html>
