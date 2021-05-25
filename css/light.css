@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 100vh;
     height: 100vh;
 
-    background: linear-gradient(0deg, #ffe4e1, transparent 20vh), url(../images/ulgtu_light.jpg) no-repeat;
+    background: linear-gradient(0deg, #ffe4e1, transparent 2vh), url(../images/ulgtu_light.jpg) no-repeat;
     
     background-size: cover;
 }
