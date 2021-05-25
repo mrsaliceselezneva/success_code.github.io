@@ -472,9 +472,10 @@ opacity: 0.7;
 
 .theme-button
 {
+    color: #5b92f1;
     width:10%;
-    height :5%;
-    border:2px solid #ccc;
+    max-height :5%;
+    border:2px solid #5b92f1;
     border-radius: 10px;
     text-decoration-color: azure;
     text-align:center;
@@ -482,7 +483,7 @@ opacity: 0.7;
     position:fixed;
     top:2%;
     right:1%;
-    background: #4f7faf;
+    background: transparent;
 }
 
 .theme-button:hover
