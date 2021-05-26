@@ -163,12 +163,6 @@ h1, h2, h3, h4, h5, h6 {
     transition: opacity .1s linear;
 }
 
-iframe{
-    max-width: 40vw;
-    max-height: 50vh;
-    border: none;
-}
-
 .nav__link:hover {
     color: cornflowerblue;
     text-decoration: none;
