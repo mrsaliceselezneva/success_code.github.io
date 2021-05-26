@@ -163,12 +163,6 @@ h1, h2, h3, h4, h5, h6 {
     transition: opacity .1s linear;
 }
 
-iframe{
-    max-width: 40vw;
-    max-height: 50vh;
-    border: none;
-}
-
 .nav__link:hover {
     color: cornflowerblue;
     text-decoration: none;
@@ -472,9 +466,11 @@ opacity: 0.7;
 
 .theme-button
 {
+    transition: all 0.5s ease-out;
+    color: #5b92f1;
     width:10%;
-    height :5%;
-    border:2px solid #ccc;
+    max-height :5%;
+    border:2px solid #5b92f1;
     border-radius: 10px;
     text-decoration-color: azure;
     text-align:center;
@@ -482,10 +478,10 @@ opacity: 0.7;
     position:fixed;
     top:2%;
     right:1%;
-    background: #4f7faf;
+    background: transparent;
 }
 
 .theme-button:hover
 {
-    background: #ff7eb63b;
+    background: #7e84ff3b;
 }

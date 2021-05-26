@@ -168,12 +168,6 @@ h1, h2, h3, h4, h5, h6 {
     transition: opacity .1s linear;
 }
 
-iframe{
-    max-width: 40vw;
-    max-height: 50vh;
-    border: none;
-}
-
 .nav__link:hover {
     color: cornflowerblue;
     text-decoration: none;
@@ -477,8 +471,9 @@ opacity: 0.7;
 
 .theme-button
 {
+    transition: all 0.5s ease-out;
     width:10%;
-    height :5%;
+    max-height :5%;
     border:2px solid #ccc;
     border-radius: 10px;
     text-decoration-color: azure;
@@ -487,10 +482,10 @@ opacity: 0.7;
     position:fixed;
     top:2%;
     right:1%;
-    background: #ff7eb63b;
+    background: transparent;
 }
 
 .theme-button:hover
 {
-    background: #6f9fcf;
+    background: #ff7eb63b;
 }
